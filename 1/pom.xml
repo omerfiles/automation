@@ -70,16 +70,9 @@
                     </property>
                 </systemProperties>
             <runOrder>alphabetical</runOrder>
-                <includes>
-
-                    <!--<include>**/Applicant/**</include>-->
-                    <include>**/HRAdmin/**</include>
-                    <!--<include>**/Referrer/**</include>-->
-                    <include>**/ZaoFinal/**</include>
-
-                </includes>
+                
             <excludes>
-            <exclude>**/HrDashboard.java</exclude>
+            
             </excludes>
             </configuration>
             </plugin>
