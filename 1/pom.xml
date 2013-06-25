@@ -20,11 +20,73 @@
       <artifactId>junit</artifactId>
       <version>4.4</version>
       <scope>test</scope>
+      
     </dependency>
     <dependency>
         <groupId>org.seleniumhq.selenium</groupId>
         <artifactId>selenium-java</artifactId>
         <version>2.33.0</version>
     </dependency>  
+    
+    
   </dependencies>
+  <profiles>
+        <profile>
+            <id>regression</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+
+            <properties>
+                <remoteMachine>192.168.14.152</remoteMachine>
+            </properties>
+            <build>
+            <plugins>
+            <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.12</version>
+
+            <dependencies>
+            <!-- Force using the latest JUnit 47 provider -->
+            <dependency>
+            <groupId>org.apache.maven.surefire</groupId>
+            <artifactId>surefire-junit4</artifactId>
+            <version>2.4.2</version>
+
+            </dependency>
+            </dependencies>
+            <configuration>
+                <!--<forkedProcessTimeoutInSeconds>180</forkedProcessTimeoutInSeconds>-->
+                <systemProperties>
+                    <property>
+                        <name>remoteUrl</name>
+                        <value>http://192.168.14.81:5555</value>
+                    </property>
+
+                    <property>
+                        <name>companyId</name>
+                        <value>0</value>
+                    </property>
+                </systemProperties>
+            <runOrder>alphabetical</runOrder>
+                <includes>
+
+                    <!--<include>**/Applicant/**</include>-->
+                    <include>**/HRAdmin/**</include>
+                    <!--<include>**/Referrer/**</include>-->
+                    <include>**/ZaoFinal/**</include>
+
+                </includes>
+            <excludes>
+            <exclude>**/HrDashboard.java</exclude>
+            </excludes>
+            </configuration>
+            </plugin>
+            </plugins>
+            </build>
+
+        </profile>
+        </profiles>
+  
 </project>
