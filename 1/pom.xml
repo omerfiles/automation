@@ -70,7 +70,8 @@
                     </property>
                 </systemProperties>
             <runOrder>alphabetical</runOrder>
-                
+            
+            <includes>rerer.java</includes>    
             <excludes>
             
             </excludes>
