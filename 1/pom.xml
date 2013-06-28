@@ -41,7 +41,7 @@
         <testClassesDirectory>${project.build.directory}/classes/</testClassesDirectory>
         <includes>
         <include>
-        **/*rerer.java
+        ${basedir}/src/test/rerer.java
         </include>
         </includes>  
         </configuration>
