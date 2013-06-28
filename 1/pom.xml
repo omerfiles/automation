@@ -39,7 +39,11 @@
         <configuration>
         <testSourceDirectory>${basedir}/1/src/test/</testSourceDirectory>
         <testClassesDirectory>${project.build.directory}/classes/</testClassesDirectory>
-          
+        <includes>
+        <include>
+        **/*rerer.java
+        </include>
+        </includes>  
         </configuration>
       </plugin>
       </plugins>
