@@ -72,7 +72,7 @@
             <runOrder>alphabetical</runOrder>
             
             <includes>
-            <include> **/*.java</include>
+            <include> "rerer.java"</include>
            </includes>    
             <excludes>
             
