@@ -71,7 +71,9 @@
                 </systemProperties>
             <runOrder>alphabetical</runOrder>
             
-            <includes>rerer.java</includes>    
+            <includes>
+            <include> rerer.java</include>
+           </includes>    
             <excludes>
             
             </excludes>
